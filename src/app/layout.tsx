@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto_Flex } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Roboto_Flex({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Movie Gurdian",
-  description: "the app to pick your next cinematic experience",
+  title: "MedBot",
+  description: "Your diagnosis guide",
 };
 
 export default function RootLayout({
@@ -16,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+
+        </body>
     </html>
   );
 }
