@@ -67,7 +67,8 @@ export default function SignupBody() {
                     setData({ ...data, email: e.target.value })
                   }
                   required
-                  className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 placeholder-gray-400 sm:text-sm"
+                  className="h-6 block w-full rounded-sm border-gray-300 shadow-sm placeholder-gray-400 sm:text-sm focus:border-brand-blue focus:outline-none focus:ring-1 focus:ring-brand-blue"
+
                 />
               </div>
             </div>
@@ -94,7 +95,8 @@ export default function SignupBody() {
                     setData({ ...data, email: e.target.value })
                   }
                   required
-                  className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 placeholder-gray-400 sm:text-sm"
+                  className="h-6 block w-full rounded-sm border-gray-300 shadow-sm placeholder-gray-400 sm:text-sm focus:border-brand-blue focus:outline-none focus:ring-1 focus:ring-brand-blue"
+
                 />
               </div>
             </div>
@@ -119,7 +121,8 @@ export default function SignupBody() {
                   onChange={(e) =>
                     setData({ ...data, password: e.target.value })
                   }
-                  className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 placeholder-gray-400 sm:text-sm"
+                  className="h-6 block w-full rounded-sm border-gray-300 shadow-sm placeholder-gray-400 sm:text-sm focus:border-brand-blue focus:outline-none focus:ring-1 focus:ring-brand-blue"
+
                 />
               </div>
               

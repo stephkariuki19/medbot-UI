@@ -1,12 +1,12 @@
 import Image from "next/image";
-import Navbar from "./Navbar";
-import Homebody from "./Homebody";
+import Navbar from "./(components)/Navbar";
+import Homebody from "./(components)/Homebody";
 
 export default function Home() {
   return (
-    <div >
-     <Navbar/>
-     <Homebody/>
+    <div>
+      <Navbar />
+      <Homebody />
     </div>
   );
 }
