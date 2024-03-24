@@ -16,7 +16,9 @@ const config: Config = {
       colors:{
         "brand-blue":"#2C8DFF",
         "light-grey":"#eeeff4",
-        "dark-grey":"#e6e9ed"
+        "dark-grey":"#e6e9ed",
+        "chat-icon":"#83CEF8"
+
       }
     },
   },
