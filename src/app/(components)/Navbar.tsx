@@ -16,7 +16,7 @@ function Navbar({}: Props) {
         </div>
 
         <div className=" normal-div font-semibold flex items-center space-x-6 p-4 text-sm md:text-sm lg:text-lg">
-        <h5 className="hover:border-b-2 border-brand-blue">What is Medbot?</h5>
+        <h5 className="hover:border-b-2 border-brand-blue">About Medbot</h5>
 
         <h5 className="hover:border-b-2 border-brand-blue">Login</h5>
         <button className="p-1 rounded-lg bg-white text-brand-blue border border-brand-blue border-2 hover:bg-brand-blue hover:text-white">
