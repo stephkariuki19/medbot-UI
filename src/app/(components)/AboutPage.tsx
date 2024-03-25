@@ -7,13 +7,13 @@ type Props = {};
 function AboutPage({}: Props) {
   return (
     <div >
-      <div className="upper border border-black ">
+      <div className="upper  ">
         <h1 className="font-bold text-center text-5xl text-brand-blue  m-4 ">
           What is Medbot?
         </h1>
 
         <div className="flex justify-center items-center ">
-          <div className="border border-black w-3/4">
+          <div className=" w-3/4">
             <p className="text-center">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi
               sapiente laborum ad, nostrum ab quasi iste repellendus amet nam

@@ -1,10 +1,26 @@
+'use client'
 import React from "react";
 
 type Props = {};
 
 function Chatbody({}: Props) {
+ 
+
+const handleSubmit = async (e :{preventDefault:()=>void}) => {
+  e.preventDefault()
+  console.log("submitted")
+}
+
+const handleUpload = async (e :{preventDefault:()=>void}) => {
+  e.preventDefault()
+  console.log("uploaded")
+}
+
   return (
+    
     <div className="parent-div  p-6">
+    
+
       <div className="top-part  mb-16 ">
         <div className="user-query  mb-9">
           <div className="user-id flex items-center mb-6 font-bold ">
@@ -30,19 +46,24 @@ function Chatbody({}: Props) {
 
       <div className="bottom-part   ">
 
-          <input className=" w-full  bg-light-grey p-4  mb-6 rounded-xl outline-none  focus:border-grey-800 focus:outline-none focus:ring-1 focus:ring-grey-800"
+            <form action="" onSubmit={handleSubmit}>
+            <input className=" w-full  bg-light-grey p-4  mb-6 rounded-xl outline-none  focus:border-grey-800 focus:outline-none focus:ring-1 focus:ring-grey-800"
            placeholder="type in  your medical question"
            type="text" />
-         
-         <div className="navigation flex items-center justify-center space-x-5">
-            <button className="p-2   rounded-lg bg-white text-brand-blue border border-brand-blue border-2 hover:bg-brand-blue hover:text-white">
+
+<div className="navigation flex items-center justify-center space-x-5">
+<button  onClick={handleUpload}  className="p-2   rounded-lg bg-white text-brand-blue border border-brand-blue border-2 hover:bg-brand-blue hover:text-white">
               Upload Picture
             </button>
 
-            <button className="p-2  rounded-lg bg-white text-brand-blue border border-brand-blue border-2 hover:bg-brand-blue hover:text-white">
+            <button  onClick = {handleSubmit} className="p-2    rounded-lg bg-white text-brand-blue border border-brand-blue border-2 hover:bg-brand-blue hover:text-white">
               Send Chat
             </button>
           </div>
+
+            </form>
+           
+
 
   
 
