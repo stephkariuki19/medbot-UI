@@ -16,8 +16,8 @@ export default function SignupBody() {
     console.log(data)
     axios.post('/api/registerApi', data)
     .then(() => setData({first_name:'',last_name:'', email:'',password:''}))
-    .then(() => toast.success('Registration is successful!'))
-    .catch(() => toast.error('Something went wrong!'))
+    .then(() => toast.success('Registration is successful!🎉'))
+    .catch(() => toast.error('Something went wrong😔!'))
  }
 
 
