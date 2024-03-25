@@ -1,13 +1,41 @@
 "use client"
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import { signIn, useSession } from 'next-auth/react'
+import { toast } from "react-hot-toast"
+import { useRouter } from "next/navigation"
+import { error } from "console";
 
 export default function LoginBody() {
+  const session = useSession()
+  const router = useRouter()
   const [data, setData] = useState({
-    first_name: "",
-    last_name: "",
     email: "",
     password: ""
   });
+
+  
+  useEffect(() => {
+    if (session?.status === 'authenticated') {
+       router.push('/chatContent') 
+    }
+})
+   
+    const loginUser = async (e :{preventDefault:()=>void}) => {
+      e.preventDefault()
+      signIn('credentials',
+      {...data, redirect: false
+      })
+      .then((callback) => {
+          if (callback?.error) {
+              toast.error("Wrong credentials,😞try again")
+              console.log(callback.error)
+          }
+
+          if(callback?.ok && !callback?.error) {
+              toast.success('Logged in successfully! 🎊')
+          }
+      } )
+    }
 
   return (
     <>
@@ -19,7 +47,7 @@ export default function LoginBody() {
             Welcome Back !
           </h2>
 
-          <form className="mt-4 space-y-6">
+          <form className="mt-4 space-y-6" onSubmit={loginUser}>
 
         
 
@@ -83,7 +111,7 @@ export default function LoginBody() {
                 type="submit"
                 className=" transition-transform transform-gpu hover:translate-y-1  w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-semibold text-white bg-brand-blue"
               >
-                Sign Up
+                Login In
               </button>
             </div>
           </form>

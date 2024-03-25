@@ -1,5 +1,6 @@
 import Navbar from "../(components)/Navbar";
 import Chatbody from "../(components)/Chatbody";
+import Footer from "../(components)/Footer";
 
 import React from 'react'
 
@@ -10,6 +11,7 @@ function page({}: Props) {
     <div>
         <Navbar/>
         <Chatbody/>
+        <Footer/>
     </div>
   )
 }
