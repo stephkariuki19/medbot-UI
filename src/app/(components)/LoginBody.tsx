@@ -16,7 +16,7 @@ export default function LoginBody() {
         <div className="w-full sm:max-w-sm p-4 bg-light-grey rounded-lg bg-opacity-35">
 
           <h2 className="text-2xl font-bold text-white text-center">
-            Welcome Back
+            Welcome Back !
           </h2>
 
           <form className="mt-4 space-y-6">

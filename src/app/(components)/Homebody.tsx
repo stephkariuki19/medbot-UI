@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 function Homebody() {
   return (
@@ -10,11 +11,17 @@ function Homebody() {
           A medical chat-bot that provides access to health information and 
           assistance in diagnosing respiratory diseases.
         </h4>
-        <h5 className="text-sm text-brand-blue mb-6 ">Quick Guide</h5>
 
+        <Link href="/about">
+        <h5 className="text-sm text-brand-blue mb-6 hover:font-bold">Quick Guide</h5>
+        </Link>
+
+        <Link href="/register">
         <button className="w-32 h-19 relative p-1 rounded-lg bg-brand-blue text-white transition-transform transform-gpu hover:translate-y-1">
             Get Started
         </button>
+        </Link>
+
 
       </div>
       <div className="img-body  relative bottom-6">
