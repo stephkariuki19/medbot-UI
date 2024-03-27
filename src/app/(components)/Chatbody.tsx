@@ -115,7 +115,7 @@ const handleUpload = async (e :{preventDefault:()=>void}) => {
       
             <form onSubmit={handleFileSubmit}>
                     <input type="file" onChange={handleFileChange} />
-                    <button className='p-1 rounded-lg bg-white text-brand-blue border border-brand-blue border-2 hover:bg-brand-blue hover:text-white' type="submit">Upload File</button>
+                    <button className=' sm:relative bottom-2  p-1 rounded-lg bg-white text-brand-blue border border-brand-blue border-2 hover:bg-brand-blue hover:text-white' type="submit">Upload File</button>
                 </form>
 
 
