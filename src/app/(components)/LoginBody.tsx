@@ -16,7 +16,7 @@ export default function LoginBody() {
   
   useEffect(() => {
     if (session?.status === 'authenticated') {
-       router.push('/chatContent') 
+       router.push('/chat') 
     }
 })
    

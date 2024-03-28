@@ -10,6 +10,10 @@ function Chatbody({}: Props) {
 
     // State to store the selected file
     const [selectedFile, setSelectedFile] = useState(null);
+    const [userQuery, setuserQuery] = useState({
+      user_question: "",
+    });
+
 
     // Function to handle file selection
     const handleFileChange = (e: {
@@ -59,7 +63,9 @@ function Chatbody({}: Props) {
 
 const handleSubmit = async (e :{preventDefault:()=>void}) => {
   e.preventDefault()
-  console.log("submitted")
+  console.log(userQuery)
+  let data = userQuery.user_question
+
 }
 
 const handleUpload = async (e :{preventDefault:()=>void}) => {
@@ -101,7 +107,15 @@ const handleUpload = async (e :{preventDefault:()=>void}) => {
                 <div className="navigation flex items-center justify-center space-x-2">
             <input className="w-full bg-light-grey p-4 mb-6 rounded-xl outline-none focus:border-grey-800 focus:outline-none focus:ring-1 focus:ring-grey-800"
                 placeholder="Type in your medical question"
-                type="text" />
+                type="text"
+                id="question"
+                name="question"
+                value={userQuery.user_question}
+                onChange={(e) =>
+                  setuserQuery({ ...userQuery, user_question: e.target.value })
+                }
+                
+                />
 
             <svg onClick={handleSubmit} className='relative bottom-3 w-10 h-10 hover:fill-brand-blue' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <title>send-outline</title>
