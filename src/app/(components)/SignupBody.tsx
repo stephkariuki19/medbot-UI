@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 
 export default function SignupBody() {
-  const [data, setData] = useState({
+  const [registerdata, setregisterData] = useState({
     first_name: "",
     last_name: "",
     email: "",
@@ -13,9 +13,8 @@ export default function SignupBody() {
 
   const registerUser = async (e: { preventDefault: () => void }) => {
     e.preventDefault()
-    console.log(data)
-    axios.post('/api/registerApi', data)
-    .then(() => setData({first_name:'',last_name:'', email:'',password:''}))
+    axios.post('/api/registerApi', registerdata)
+    .then(() => setregisterData({first_name:'',last_name:'', email:'',password:''}))
     .then(() => toast.success('Registration is successful! Proceed to login🎉'))
     .catch(() => toast.error('Something went wrong😔!'))
  }
@@ -47,8 +46,8 @@ export default function SignupBody() {
                   id="first_name"
                   name="first_name"
                   type="text"
-                  value={data.first_name}
-                  onChange={(e) => setData({ ...data, first_name: e.target.value })}
+                  value={registerdata.first_name}
+                  onChange={(e) => setregisterData({ ...registerdata, first_name: e.target.value })}
                   required
                   className="h-6 block w-full rounded-sm border-gray-300 shadow-sm placeholder-gray-400 sm:text-sm focus:border-brand-blue focus:outline-none focus:ring-1 focus:ring-brand-blue"
                 />
@@ -69,8 +68,8 @@ export default function SignupBody() {
                   id="last_name"
                   name="last_name"
                   type="last_name"
-                  value={data.last_name}
-                  onChange={(e) => setData({ ...data, last_name: e.target.value })}
+                  value={registerdata.last_name}
+                  onChange={(e) => setregisterData({ ...registerdata, last_name: e.target.value })}
                   required
                   className="h-6 block w-full rounded-sm border-gray-300 shadow-sm placeholder-gray-400 sm:text-sm focus:border-brand-blue focus:outline-none focus:ring-1 focus:ring-brand-blue"
                 />
@@ -92,8 +91,8 @@ export default function SignupBody() {
                   name="email"
                   type="email"
                   autoComplete="email"
-                  value={data.email}
-                  onChange={(e) => setData({ ...data, email: e.target.value })}
+                  value={registerdata.email}
+                  onChange={(e) => setregisterData({ ...registerdata, email: e.target.value })}
                   required
                   className="h-6 block w-full rounded-sm border-gray-300 shadow-sm placeholder-gray-400 sm:text-sm focus:border-brand-blue focus:outline-none focus:ring-1 focus:ring-brand-blue"
                 />
@@ -115,9 +114,9 @@ export default function SignupBody() {
                   type="password"
                   autoComplete="current-password"
                   required
-                  value={data.password}
+                  value={registerdata.password}
                   onChange={(e) =>
-                    setData({ ...data, password: e.target.value })
+                    setregisterData({ ...registerdata, password: e.target.value })
                   }
                   className="h-6 block w-full rounded-sm border-gray-300 shadow-sm placeholder-gray-400 sm:text-sm focus:border-brand-blue focus:outline-none focus:ring-1 focus:ring-brand-blue"
                 />
